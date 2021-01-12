@@ -15,6 +15,7 @@ class CreateAttendanciesTable extends Migration
     {
         Schema::create('attendancies', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('employee_id');
             $table->timestamps();
         });
     }
