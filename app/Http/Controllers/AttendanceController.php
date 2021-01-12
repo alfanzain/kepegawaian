@@ -24,4 +24,9 @@ class AttendanceController extends Controller
 
         return redirect()->route('attend-success');
     }
+    
+    public function attendSuccess()
+    {
+        return view('pages.attendances.success');
+    }
 }
