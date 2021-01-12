@@ -12,6 +12,7 @@
                     Welcome!
                 </div>
                 <br />
+                {{-- @if( \Auth::user()->role == 2)  --}}
                 <a href="attend?employee_id={{ \Auth::id() }}" class="p-6 bg-white border-b border-gray-200">
                     <button
                     class="inline-flex items-center px-6 py-3 text-white font-semibold bg-blue-700 rounded-md shadow-sm"
@@ -29,6 +30,7 @@
                 <br />
                 <br />
                 <br />
+                {{-- @endif --}}
             </div>
         </div>
     </div>
