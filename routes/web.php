@@ -19,6 +19,8 @@ Route::get('/', function () {
 });
 
 Route::get('/attendance', [AttendanceController::class, 'attendance']);
+Route::get('/attend', [AttendanceController::class, 'attend']);
+Route::get('/attend-success', [AttendanceController::class, 'attendSuccess'])->name('attend-success');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
