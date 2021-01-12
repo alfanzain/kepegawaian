@@ -18,6 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/list', [AttendanceController::class, 'list']);
 Route::get('/attendance', [AttendanceController::class, 'attendance']);
 Route::get('/attend', [AttendanceController::class, 'attend']);
 Route::get('/attend-success', [AttendanceController::class, 'attendSuccess'])->name('attend-success');

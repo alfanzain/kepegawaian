@@ -8,6 +8,14 @@ use App\Models\Attendance;
 
 class AttendanceController extends Controller
 {
+    public function list() {
+        $attendances = Attendance::orderBy('created_at', 'desc')->get();
+        
+        return view('pages.attendances.list', [
+            'attendances' => $attendances
+        ]);
+    }
+    
     public function attendance() {
         $employees = Employee::all();
 
