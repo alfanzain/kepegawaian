@@ -12,8 +12,17 @@
         <form method="POST" action="{{ route('register') }}">
             @csrf
 
-            <!-- Name -->
             <div>
+                <x-label for="role" value="Role" />
+
+                <select name="role" class="block mt-1 w-full">
+                    <option value="1">Admin</option>
+                    <option value="2">Employee</option>
+                </select>
+            </div>
+
+            <!-- Name -->
+            <div class="mt-4">
                 <x-label for="name" :value="__('Name')" />
 
                 <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus />
